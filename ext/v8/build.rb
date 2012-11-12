@@ -3,7 +3,7 @@ LIBV8_COMPATIBILITY = '~> 3.11.8'
 
 def have_rubygem_libv8?
   require 'rubygems'
-  gem 'libv8', LIBV8_COMPATIBILITY
+  gem 'libv8-freebsd', LIBV8_COMPATIBILITY
   require 'libv8'
   return true
 rescue Gem::LoadError
@@ -30,7 +30,7 @@ def build_with_system_libv8
     If you don't want to bother with all that, there is a
     rubygem that will do all this for you. You can add
     following line to your Gemfile:
-        gem 'libv8', '#{LIBV8_COMPATIBILITY}'
+        gem 'libv8-freebsd', '#{LIBV8_COMPATIBILITY}'
 
     We hope that helps, and we apologize, but now we have
     to push the eject button on this install.
